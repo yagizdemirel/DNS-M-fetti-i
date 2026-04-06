@@ -1,0 +1,31 @@
+# 🦀 Rust / Cargo
+/target/
+**/*.rs.bk
+
+# 🔒 Güvenlik ve Sırlar (Rubrik Kriteri: Kesinlikle depoya atılmamalı)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# 🍎 macOS (İşletim Sistemi Kalıntıları)
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# 💻 IDE ve Editörler
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 📦 Diğer / Loglar
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
