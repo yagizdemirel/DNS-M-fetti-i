@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Müfettişi Paneli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header class="glass-header">
+            <div class="header-content">
+                <h1>🕵️ DNS Müfettişi Dashboard</h1>
+                <p>Ağ trafiğindeki alan adlarını güvenle yakalayın, DoH (1.1.1.1) ile gizlice çözümleyin.</p>
+            </div>
+            <div class="status-indicator">
+                <div class="pulsing-dot"></div>
+                <span>Sistem Aktif</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="stats-grid">
+                <div class="stat-card glass-panel">
+                    <h3>Yakalanan İstek</h3>
+                    <div class="stat-value" id="total-requests">0</div>
+                </div>
+                <div class="stat-card glass-panel">
+                    <h3>Son Aktivite</h3>
+                    <div class="stat-value" style="font-size: 1.5rem" id="last-activity">-</div>
+                </div>
+                <div class="stat-card glass-panel">
+                    <h3>DoH Durumu</h3>
+                    <div class="stat-value" style="font-size: 1.5rem; color: #4ade80;">Cloudflare TLS</div>
+                </div>
+            </div>
+
+            <section class="report-section glass-panel">
+                <div class="section-header">
+                    <h2>Canlı DNS Raporu</h2>
+                    <button id="refresh-btn" class="glass-btn">Yenile ⟳</button>
+                </div>
+                <div class="table-container">
+                    <table id="dns-reports">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Zaman</th>
+                                <th>Aranan Adres (Domain)</th>
+                                <th>Kayıt Tipi</th>
+                                <th>Durum</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reports-body">
+                            <!-- Veriler Javascript ile buraya eklenecek -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
